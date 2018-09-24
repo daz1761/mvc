@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Countries List";
+}
+
+<h2>Countries List</h2>
+
+<ul>
+    @foreach(string strCountry in (List<string>)ViewData["Countries"]) // ViewBag is not strongly typed!
+    {
+        <li>@strCountry</li>
+        // ViewBag and ViewData do not report any errors when compiling...
+        // runtime is the only time we get to see any errors.
+    }
+</ul>
+
